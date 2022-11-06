@@ -17,7 +17,7 @@ DEF (feasible individual): Given a goal based on N we checked if all allele in t
 
 ## Mutation and Crossover
 The functions for mutation and crossover are based on the onemax example from the professor's lecture. The parent on which we apply the genetic operator are chosen with a tournament selection which basically consists in selecting two individuals randomly and selecting who has the best fitness.
-Moreover we randomly select a genetic operator biased on the distance to the solution which means: the further we are from the optimal solution (unachievable for large sizes of the problem) the more likely a crossover is going to happen (exploration), if we are close to the optimal solution, the more likely we perform a mutation (exploitation). Furthermore we added a mechanism that forces a set number of iterations to perform 
+Moreover we randomly select a genetic operator biased on the distance to the solution which means: the further we are from the optimal solution (unachievable for large sizes of the problem) the more likely a crossover is going to happen (exploration), if we are close to the optimal solution, the more likely we perform a mutation (exploitation).
 
 Futhermore we kept track of the recent "history" of the best individual checking what are the genetic operators that lead to that fitness value and then if for some iteration no better solution is found we added a mechanism that forces the genetic operations of the next iteration to be the opposite of the current best candidate. If no solution is found after some iterations we forced the algorithm to switch genetic operator again. 
 ## Main parameters
